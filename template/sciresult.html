@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+
+{% block contant %}
+ <div class="container mb-5">
+     <div class="row">
+         <div class="col-lg-8 mt-2 mx-auto ">
+             <div class="card">
+             
+             <div class="card-body bg-primary mb-4">
+             <h2 class="display-5 text-center text-light">Bihar School Examination Board,Patna</h2>
+             <h2 class="display text-center ">Marks Sheet(12th)</h2>
+             </div>
+             
+              <div class="row">
+                  <div class="col-lg-4">
+                    <div class="card-body">
+                     <img src="{{ result.0.img.url }}" height=200 width="240px">
+                  </div>
+                  </div>
+                  <div class="col-lg-7 ml-3">
+                      <table class="table">
+                               
+                    <tr>
+                       <td>name</td>
+                       <td>{{ result.0.name }}</td>
+                   </tr>
+                     
+                    <tr>
+                       <td>dob</td>
+                       <td>{{ result.0.dob }}</td>
+                   </tr>
+                   
+                    <tr>
+                       <td>Gender</td>
+                       <td>{{ result.0.i_gender }}</td>
+                   </tr>
+                     
+                    <tr>   
+                       <td>roll_no</td>
+                       <td>{{ result.0.roll_no }}</td>
+                    </tr>
+                      
+                    <tr>        
+                       <td>roll_code</td>
+                       <td>{{ result.0.roll_code }}</td>
+                   </tr>
+               </table>
+            </div>
+         </div>
+                
+            <table class="table">
+                   <tr>
+                       <th>subject name </th>
+                       <th>Full Marks </th>
+                       <th>Pass Marks</th>
+                       <th>Subject total</th>
+                   </tr>
+                     
+                       <tr>
+                         <td>Math</td>
+                         <td>100</td>
+                         <td>30</td>
+                         <td>{{ result.0.math }}</td>
+                     </tr>
+                      
+                       <tr>
+                         <td>Physics</td>
+                         <td>100</td>
+                         <td>30</td>
+                         <td>{{ result.0.phy }}</td>
+                     </tr>
+                      
+                       <tr>
+                         <td>Chemistry</td>
+                         <td>100</td>                       
+                         <td>30</td>
+                         <td>{{ result.0.che }}</td>
+                     </tr>
+                      
+                       <tr>
+                         <td>Biology</td>
+                         <td>100</td>
+                         <td>30</td>
+                         <td>{{ result.0.bio }}</td>
+                     </tr>
+                     
+                      <tr>
+                         <td>English </td>
+                         <td>100</td>
+                         <td>30</td>
+                         <td>{{ result.0.eng }}</td>
+                     </tr>
+                     
+                     <tr>
+                         <td>Hindi</td>
+                         <td>100</td>
+                         <td>30</td>
+                         <td>{{ result.0.hindi }}</td>
+                     </tr>
+                     
+                      <tr>
+                         <th><h3 class="display-4"></h3>Total Marks</th>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         <th><h3 class="display-5">{{ t_mark }}  :  {{ devision }}Div</h3></th>
+                          
+                      </tr>  
+               </table>
+             </div>
+         </div>
+     </div>
+ </div>
+
+{% endblock %}
+

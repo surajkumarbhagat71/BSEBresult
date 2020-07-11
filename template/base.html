@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+        <a href="{% url 'home' %}" class="navbar-brand">BSEB Result</a>
+        
+        <ul class="navbar-nav ml-auto">
+           <li class="nav-item ml-3 ">
+               <a href="{% url 'home' %}" class="btn btn-danger btn-sm">Back To Home</a>
+           </li> 
+        </ul>
+        
+    </nav>
+    
+    {% block contant %}{% endblock %}
+
+</body>
+</html>
+

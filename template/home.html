@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block contant %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 mx-auto mt-5">
+            <div class="list-group">
+               
+                <a href="{% url 'msearch' %}" class="list-group list-group-item list-group-item-action">Maric (10Th) </a>
+                
+                <a href="{% url 'scisearch'%}" class="list-group  list-group-item list-group-item-action">Science (12Th )</a>
+                
+                <a href="{% url 'besearch' %}" class="list-group list-group-item list-group-item-action">Bihar engineering</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-6 mx-auto mt-5">
+           <div class="card">
+               <div class="card-body">
+            <a href="{% url 'msearch' %}"><h3 class="lead">1. You want to show Matric result, click on </h3></a>
+            <a href="{% url 'scisearch'%}"><h3 class="lead">2. You want to show Inter Science result, click on </h3></a>
+            <a href="{% url 'notfond' %}"><h3 class="lead">3. You want to show Inter Arts  result, click on </h3></a>
+            <a href="{% url 'besearch'%}"><h3 class="lead">4. You want to show Bihar engineer  result, click on </h3></a>
+            <a href="{% url 'notfond' %}"><h3 class="lead">5. You want to show Inter commarce  result, click on </h3></a>
+        </div>
+    </div>
+</div>
+ </div>
+</div>
+
+{% endblock %}
+
